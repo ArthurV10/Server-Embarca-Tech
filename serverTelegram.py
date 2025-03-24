@@ -9,8 +9,8 @@ app = Flask(__name__)
 gas_levels = []
 
 # Obtenha o token e o chat_id das variáveis de ambiente
-TELEGRAM_BOT_TOKEN = "8122446763:AAEDgOlZuJImIY3pPGRm2__ZwVMmlBNRRyQ"  # Substitua por seu token real, se necessário
-TELEGRAM_CHAT_ID =  "1223249926" # Substitua por seu chat_id real
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
 # Armazenar o último nível de gás notificado
 last_sent_level = None
