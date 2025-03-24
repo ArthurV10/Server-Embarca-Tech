@@ -100,4 +100,4 @@ def notify_gas_level():
         return jsonify({"gas_levels": gas_levels, "count": len(gas_levels)}), 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
